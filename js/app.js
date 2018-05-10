@@ -4,6 +4,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
   $stateProvider
 
+    .state('main', {
+        url: '/',
+        templateUrl: 'templates/about.html',
+        controller : "AboutCtrl"
+    })
+
     .state('about', {
         url: '/about',
         templateUrl: 'templates/about.html',
@@ -34,6 +40,6 @@ app.config(function($stateProvider, $urlRouterProvider) {
         controller : "ResumeCtrl"
     })
 
-    $urlRouterProvider.otherwise('/about');
+    $urlRouterProvider.otherwise('/');
 
 })

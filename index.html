@@ -1,12 +1,76 @@
+<!DOCTYPE html>
 <html>
 
-<body style="background-image: url('loading.gif'); background-position: center; background-size: cover;">
+    <title>Nanda Kishore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <div align="center" style="top: 40%; position: absolute;">
-        <b style="text-shadow: 5px 5px grey; font-size: 700%;">Nanda Kishore is Coming Soon</b><br><br>
-        <img src="cool.png" height="auto" width="15%">
-    </div>
+    <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
 
-</body>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+
+    <body ng-app="starter">
+
+        <div ng-controller="SideNav" class="w3-sidebar w3-bar-block w3-light w3-card w3-collapse" style="display:{{SideMenuToggle}}">
+
+            <img src="img/me.jpg" height="auto" width="100%"/>
+
+            <div class="w3-container w3-blue">
+                <h4>Nanda Kishore</h4>
+            </div>
+  
+            <a ui-sref="about" ng-click="closeSideNav()" style="border-bottom: 1px dashed grey;" class="w3-bar-item w3-button">
+                <i style="font-size: 150%;" class="fa fa-info-circle"></i> <b>About</b>
+            </a>
+  
+            <button style="border-bottom: 1px dashed grey;" class="w3-button w3-block w3-left-align" onclick="myAccFunc()" ng-dblclick="closeSideNav()">
+                <i style="font-size: 150%;" class="fa fa-list-alt"></i> <b>Projects</b> <i class="fa fa-caret-down"></i>
+            </button>
+
+            <div id="demoAcc" class="w3-hide w3-black w3-card">
+                <a href="#/projects/{{$index}}" ng-click="closeSideNav()" class="w3-bar-item w3-button" ng-repeat="project in ProjectsList">
+                    <img src="img/{{project}}.png" height="auto" width="25%" /> {{project}}
+                </a>
+            </div>
+
+            <a ui-sref="skills" ng-click="closeSideNav()" style="border-bottom: 1px dashed grey;" href="#" class="w3-bar-item w3-button">
+                <i style="font-size: 150%;" class="fa fa-thumbs-up"></i> <b>Skills</b>
+            </a>
+
+            <a ui-sref="achievements" ng-click="closeSideNav()" style="border-bottom: 1px dashed grey;" href="#" class="w3-bar-item w3-button">
+                <i style="font-size: 150%;" class="fa fa-trophy"></i> <b>Achievements</b>
+            </a>
+
+            <a ui-sref="resume" ng-click="closeSideNav()" style="border-bottom: 1px dashed grey;" href="#" class="w3-bar-item w3-button">
+                <i style="font-size: 150%;" class="fa fa-file"></i> <b>Resume</b>
+            </a>
+
+            <a ng-click="closeSideNav()" style="color:red;border-bottom: 1px dashed grey;" class="w3-bar-item w3-button w3-large w3-hide-large">
+                <i style="font-size: 150%;" class="fa fa-times-circle"></i> <b>Close</b>
+            </a>
+
+        </div>
+
+        <div ui-view></div>
+
+
+        <script>
+
+            function myAccFunc() {
+                var x = document.getElementById("demoAcc");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else { 
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+            
+        </script>
+
+
+    </body>
 
 </html>

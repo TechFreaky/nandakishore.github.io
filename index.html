@@ -4,7 +4,9 @@
     <title>Nanda Kishore</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <script src="js/angular.min.js"></script>
     <script src="js/angular-ui-router.min.js"></script>
@@ -16,13 +18,13 @@
 
         <div ng-controller="SideNav" class="w3-sidebar w3-bar-block w3-light w3-card w3-collapse" style="display:{{SideMenuToggle}}">
 
-            <img src="img/me.jpg" height="auto" width="100%"/>
+            <img src="img/informal.jpg" height="auto" width="100%"/>
 
             <div class="w3-container w3-blue">
                 <h4>Nanda Kishore</h4>
             </div>
   
-            <a ui-sref="about" ng-click="closeSideNav()" style="border-bottom: 1px dashed grey;" class="w3-bar-item w3-button">
+            <a ui-sref="about" ng-click="closeSideNav()" style="border-bottom: 1px dashed grey; text-decoration: none;" class="w3-bar-item w3-button">
                 <i style="font-size: 150%;" class="fa fa-info-circle"></i> <b>About</b>
             </a>
   
@@ -31,24 +33,28 @@
             </button>
 
             <div id="demoAcc" class="w3-hide w3-black w3-card">
-                <a href="#/projects/{{$index}}" ng-click="closeSideNav()" class="w3-bar-item w3-button" ng-repeat="project in ProjectsList">
+                <a href="#/projects/{{$index}}" style="text-decoration: none;" ng-click="closeSideNav()" class="w3-bar-item w3-button" ng-repeat="project in ProjectsList">
                     <img src="img/{{project}}.png" height="auto" width="25%" /> {{project}}
                 </a>
             </div>
 
-            <a ui-sref="skills" ng-click="closeSideNav()" style="border-bottom: 1px dashed grey;" href="#" class="w3-bar-item w3-button">
+            <a ui-sref="experience" ng-click="closeSideNav()" style="border-bottom: 1px dashed grey; text-decoration: none;" class="w3-bar-item w3-button">
+                <i style="font-size: 150%;" class="fa fa-certificate"></i> <b>Experience</b>
+            </a>
+
+            <a ui-sref="skills" ng-click="closeSideNav()" style="border-bottom: 1px dashed grey; text-decoration: none;" class="w3-bar-item w3-button">
                 <i style="font-size: 150%;" class="fa fa-thumbs-up"></i> <b>Skills</b>
             </a>
 
-            <a ui-sref="achievements" ng-click="closeSideNav()" style="border-bottom: 1px dashed grey;" href="#" class="w3-bar-item w3-button">
+            <a ui-sref="achievements" ng-click="closeSideNav()" style="border-bottom: 1px dashed grey; text-decoration: none;" class="w3-bar-item w3-button">
                 <i style="font-size: 150%;" class="fa fa-trophy"></i> <b>Achievements</b>
             </a>
 
-            <a ui-sref="resume" ng-click="closeSideNav()" style="border-bottom: 1px dashed grey;" href="#" class="w3-bar-item w3-button">
+            <a ui-sref="resume" ng-click="closeSideNav()" style="border-bottom: 1px dashed grey; text-decoration: none;" class="w3-bar-item w3-button">
                 <i style="font-size: 150%;" class="fa fa-file"></i> <b>Resume</b>
             </a>
 
-            <a ng-click="closeSideNav()" style="color:red;border-bottom: 1px dashed grey;" class="w3-bar-item w3-button w3-large w3-hide-large">
+            <a ng-click="closeSideNav()" style="color:red;border-bottom: 1px dashed grey; text-decoration: none;" class="w3-bar-item w3-button w3-hide-large">
                 <i style="font-size: 150%;" class="fa fa-times-circle"></i> <b>Close</b>
             </a>
 

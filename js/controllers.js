@@ -36,6 +36,14 @@ angular.module('starter.controllers', [])
 
     })
 
+    .controller("ExperienceCtrl", function($scope, $rootScope){
+
+        $rootScope.closeSideNav()
+
+        $scope.RouteName = "Experience"
+
+    })
+
     .controller("SkillsCtrl", function($scope, $rootScope){
 
         $rootScope.closeSideNav()

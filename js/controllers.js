@@ -50,6 +50,50 @@ angular.module('starter.controllers', [])
 
         $scope.RouteName = "Skills"
 
+        $scope.TechnicalSkills = [{
+            name: 'C',
+            src_url: 'c'
+        },{
+            name: 'C++',
+            src_url: 'cpp'
+        },{
+            name: 'Java',
+            src_url: 'java'
+        },{
+            name: 'Python',
+            src_url: 'python'
+        },{
+            name: 'PHP',
+            src_url: 'php'
+        },{
+            name: 'JavaScript',
+            src_url: 'javascript'
+        },{
+            name: 'NODE.JS',
+            src_url: 'node'
+        },{
+            name: 'MySQL',
+            src_url: 'mysql'
+        },{
+            name: 'Mongo DB',
+            src_url: 'mongo'
+        },{
+            name: 'Android',
+            src_url: 'android'
+        },{
+            name: 'Angular JS',
+            src_url: 'angular'
+        },{
+            name: 'Ionic',
+            src_url: 'ionic'
+        },{
+            name: 'Java FX',
+            src_url: 'javafx'
+        },{
+            name: 'Batch Script',
+            src_url: 'batch'
+        }]
+
     })
 
     .controller("AchievementsCtrl", function($scope, $rootScope){

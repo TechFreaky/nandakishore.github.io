@@ -4,7 +4,121 @@ angular.module('starter.controllers', [])
 
         $rootScope.SideMenuToggle = 'none'
 
-        $rootScope.ProjectsList = ['Versus', 'Before Leave', 'Health Bot', 'e-bills', 'RPG', 'Pradakshan', 'Notifier', 'BGM', 'Resume', 'Milinda', 'suNRIse 2k18', 'My Dairy', 'CSE-B']
+        $rootScope.ProjectsList = [{
+            name: 'Versus',
+            motto: 'Enthusiasm for programming of a young and novice programmer lead to the development of Versus.',
+            technology: 'Batch Script',
+            video_src: '',
+            asset_src: [
+                {name: '64Bit',src: 'assets/projects/Versus/Versus-64bit.exe'},
+                {name: '32Bit',src: 'assets/projects/Versus/Versus-32bit.exe'}
+            ],
+            developer: 'Nanda Kishore'
+        },{
+            name: 'Before Leave',
+            motto: 'Minimizing the time to apply for leaves and adjusting worload efficiently (for the faculty of my college, NRI IT).',
+            technology: 'Java Swings',
+            video_src: 'https://www.youtube.com/embed/p5EBHFYwP9c',
+            asset_src: [
+                {name: '64Bit',src: 'assets/projects/BeforeLeave/BeforeLeave-64bit.exe'},
+                {name: '32Bit',src: 'assets/projects/BeforeLeave/BeforeLeave-32bit.exe'}
+            ],
+            developer: 'Krishna Sastry, Nanda Kishore'
+        },{
+            name: 'Health Bot',
+            motto: 'Providing information about the disease from which user suffering based on the symptoms user provide and booking an appointment with a doctor near to user\'s location using a chat bot.',
+            technology: 'Kore.ai, Node.Js, Ionic, MongoDB, Twilio, IBM Cloud',
+            video_src: 'https://www.youtube.com/embed/oa49JSRHc6Y',
+            asset_src: [
+                {name: 'zip',src: 'assets/projects/HealthBot/HealthBot.zip'}
+            ],
+            developer: 'Nanda Kishore, Sainath, Ram Kumari, Janaki, Pavani'
+        },{
+            name: 'e-bills',
+            motto: 'Easy billing system compatible with present GST Tax System for Hindustan Candle Industries.',
+            technology: 'Ionic',
+            video_src: 'https://www.youtube.com/embed/HHUX0uGX3Ns',
+            asset_src: [],
+            developer: 'Nanda Kishore'
+        },{
+            name: 'RPG',
+            motto: 'Efficient fee payment system for Rehman Park Gym coach (My Dad).',
+            technology: 'Ionic',
+            video_src: 'https://www.youtube.com/embed/4TsEHKOGKRA',
+            asset_src: [],
+            developer: 'Nanda Kishore'
+        },{
+            name: 'Pradakshan',
+            motto: 'Easy and portable way to count number of pradakshans made by a devotee.',
+            technology: 'Ionic',
+            video_src: 'https://www.youtube.com/embed/NNDnCeATyDw',
+            asset_src: [
+                {name: 'apk',src: 'assets/projects/Pradakshan/Pradakshan.apk'}
+            ],
+            developer: 'Nanda Kishore'
+        },{
+            name: 'Notifier',
+            motto: 'Schedule maker with good visualization.',
+            technology: 'Ionic',
+            video_src: 'https://www.youtube.com/embed/bMR2PJ_np2M',
+            asset_src: [
+                {name: 'apk',src: 'assets/projects/Notifier/Notifier.apk'}
+            ],
+            developer: 'Nanda Kishore'
+        },{
+            name: 'BGM',
+            motto: 'Everyone deserves Background Music in their lives!',
+            technology: 'Ionic, Node.Js',
+            video_src: 'https://www.youtube.com/embed/i0I6xIXuNNY',
+            asset_src: [
+                {name: 'zip',src: 'assets/projects/BGM/BGM.zip'},
+                {name: 'apk',src: 'assets/projects/BGM/BGM.apk'}
+            ],
+            developer: 'Nanda Kishore'
+        },{
+            name: 'Resume',
+            motto: 'My resume as a mobile application.',
+            technology: 'Ionic',
+            video_src: '',
+            asset_src: [
+                {name: 'apk',src: 'assets/projects/Resume/Resume.apk'}
+            ],
+            developer: 'Nanda Kishore'
+        },{
+            name: 'Milinda',
+            motto: 'Managing payments, labour attendance, work progress happening at \'Milinda InfraCon Pvt Ltd\' construction sites.',
+            technology: 'Ionic, PHP, MySQL',
+            video_src: 'https://www.youtube.com/embed/3VyBaSrLFFA',
+            asset_src: [],
+            developer: 'Nanda Kishore'
+        },{
+            name: 'suNRIse 2k18',
+            motto: 'Registering participants for \'suNRIse 2k18\' using QR code.',
+            technology: 'Ionic, PHP',
+            video_src: 'https://www.youtube.com/embed/NJXrTntPRZc',
+            asset_src: [
+                {name: 'apk',src: 'assets/projects/suNRIse/suNRIse.apk'}
+            ],
+            developer: 'Nanda Kishore'
+        },{
+            name: 'My Dairy',
+            motto: 'Simple and efficient dairy application.',
+            technology: 'Ionic',
+            video_src: 'https://www.youtube.com/embed/YUkfWIz1n-U',
+            asset_src: [
+                {name: 'apk',src: 'assets/projects/MyDairy/MyDairy.apk'}
+            ],
+            developer: 'Nanda Kishore'
+        },{
+            name: 'CSE-B',
+            motto: 'Slam book for my classmates (CSE-B, NRI IT, 2014-18 batch).',
+            technology: 'Ionic, PHP, MySQL',
+            video_src: 'https://www.youtube.com/embed/SC9EmMnzOJI',
+            asset_src: [
+                {name: 'apk',src: 'assets/projects/CSE-B/CSE-B.apk'}
+            ],
+            developer: 'Nanda Kishore'
+        }]
 
         $rootScope.openSideNav = function(){
             $rootScope.SideMenuToggle = 'block'
@@ -24,15 +138,27 @@ angular.module('starter.controllers', [])
 
     })
 
-    .controller("ProjectsCtrl", function($scope, $rootScope, $stateParams){
+    .controller("ProjectsCtrl", function($scope, $rootScope, $stateParams, $sce, $timeout){
 
         $rootScope.closeSideNav()
 
         $scope.ProjectId = $stateParams.ProjectId
 
-        $scope.RouteName = "Project-"+$scope.ProjectId
+        $scope.RouteName = "Project-"+$scope.ProjectId+": "+$rootScope.ProjectsList[$scope.ProjectId].name
 
-        $scope.ProjectName = $rootScope.ProjectsList[$scope.ProjectId]
+        $scope.Project = $rootScope.ProjectsList[$scope.ProjectId]
+
+        $scope.trustSrc = function(src) {
+            return $sce.trustAsResourceUrl(src);
+        }
+
+        $scope.hideForaSec = function(){
+
+            $timeout(function() {
+                $scope.hiding = true
+            },500)
+
+        }
 
     })
 
@@ -92,6 +218,12 @@ angular.module('starter.controllers', [])
         },{
             name: 'Batch Script',
             src_url: 'batch'
+        },{
+            name: 'Kore.ai',
+            src_url: 'kore'
+        },{
+            name: 'IBM Watson',
+            src_url: 'IBM'
         }]
 
     })

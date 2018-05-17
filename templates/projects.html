@@ -7,12 +7,106 @@
         </h2>
     </div>
 
-    <div align="center">
-        <img style="background-color: black;" ng-src="img/projects/{{ProjectName}}.png" height="auto" width="15%" />
-    </div>
+    <div class="container" ng-click="closeSideNav()">
+        <div class="row">
+            <div class="col-xs-12">
+                
+                <br>
 
-    <div align="center" style="margin-top: 10%;">
-        <b style="text-shadow: 2px 3px grey; font-size: 300%;">Details of '{{ProjectName}}' will be updated soon! Stay Tuned<img src="img/cool.png" height="auto" width="15%">
+                <div class="w3-card-4" style="border-radius : 5px;">
+
+                    <header class="w3-container w3-blue" style="border-radius : 5px 5px 0 0;">
+                        <h3><b>Motto</b></h3>
+                    </header>
+
+                    <div class="w3-container">
+                        <br>
+                        <b style="font-size: 20px;">
+                            {{Project.motto}}
+                        </b>
+                        <br><br>
+                    </div>
+
+                </div>
+                <br>
+
+                <div ng-show="hiding" ng-init="hiding = false; hideForaSec()">
+
+                    <div class="w3-card-4" style="border-radius : 5px;">
+
+                        <header class="w3-container w3-blue" style="border-radius : 5px 5px 0 0;">
+                            <h3><b>Working Video</b></h3>
+                        </header>
+
+                        <div ng-if="Project.video_src === ''" class="w3-container">
+                            <br>
+                            <b style="font-size: 20px;">
+                                Coming Soon!
+                            </b>
+                            <br><br>
+                        </div>
+
+                        <div ng-if="Project.video_src != ''" class="w3-container">
+                            <br>
+                            
+                            <iframe style="border-radius : 5px;" class="w3-hide-small" width="100%" height="480" src="{{trustSrc(Project.video_src)}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+                            <iframe style="border-radius : 5px;" class="w3-hide-large" width="100%" height="auto" src="{{trustSrc(Project.video_src)}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+                            <br><br>
+                        </div>
+
+                    </div>
+                    <br>
+
+                </div>
+
+                <div class="w3-card-4" style="border-radius : 5px;">
+
+                    <header class="w3-container w3-blue" style="border-radius : 5px 5px 0 0;">
+                        <h3><b>Technologies Used</b></h3>
+                    </header>
+
+                    <div class="w3-container">
+                        <br>
+                        <b style="font-size: 20px;">
+                            {{Project.technology}}
+                        </b>
+                        <br><br>
+                    </div>
+
+                </div>
+                <br>
+
+                <div class="w3-card-4" style="border-radius : 5px;">
+
+                    <header class="w3-container w3-blue" style="border-radius : 5px 5px 0 0;">
+                        <h3><b>Developer(s)</b></h3>
+                    </header>
+
+                    <div class="w3-container">
+                        <br>
+                        <b style="font-size: 20px;">
+                            {{Project.developer}}
+                        </b>
+                        <br><br>
+                    </div>
+
+                </div>
+                <br>
+
+                <!-- <div align="center" ng-if="Project.asset_src.length != 0">
+
+                    <hr>
+                    <span ng-repeat="sources in Project.asset_src">
+                        <a style="text-decoration: none;border-radius : 5px" download href="{{sources.src}}" class="w3-button w3-blue"><b>Download {{sources.name}}</b></a>&nbsp;
+                    </span>
+
+                </div>
+                <br> -->
+
+            </div>
+        </div>
     </div>
 
 </div>

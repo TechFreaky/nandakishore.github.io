@@ -8,11 +8,8 @@ angular.module('starter.controllers', [])
             name: 'Versus',
             motto: 'Enthusiasm for programming of a young and novice programmer lead to the development of Versus.',
             technology: 'Batch Script',
-            video_src: '',
-            asset_src: [
-                {name: '64Bit',src: 'assets/projects/Versus/Versus-64bit.exe'},
-                {name: '32Bit',src: 'assets/projects/Versus/Versus-32bit.exe'}
-            ],
+            video_src: 'https://www.youtube.com/embed/wsFHoL0DKcI',
+            asset_src: [],
             developer: 'Nanda Kishore'
         },{
             name: 'Before Leave',
@@ -20,8 +17,8 @@ angular.module('starter.controllers', [])
             technology: 'Java Swings',
             video_src: 'https://www.youtube.com/embed/p5EBHFYwP9c',
             asset_src: [
-                {name: '64Bit',src: 'assets/projects/BeforeLeave/BeforeLeave-64bit.exe'},
-                {name: '32Bit',src: 'assets/projects/BeforeLeave/BeforeLeave-32bit.exe'}
+                {name: '64Bit',src: 'https://github.com/TechFreaky/Assets/releases/download/1.0/BeforeLeave.exe'},
+                {name: '32Bit',src: 'https://github.com/TechFreaky/Assets/releases/download/1.0/BeforeLeave_32bit.exe'}
             ],
             developer: 'Krishna Sastry, Nanda Kishore'
         },{
@@ -29,9 +26,7 @@ angular.module('starter.controllers', [])
             motto: 'Providing information about the disease from which user suffering based on the symptoms user provide and booking an appointment with a doctor near to user\'s location using a chat bot.',
             technology: 'Kore.ai, Node.Js, Ionic, MongoDB, Twilio, IBM Cloud',
             video_src: 'https://www.youtube.com/embed/oa49JSRHc6Y',
-            asset_src: [
-                {name: 'zip',src: 'assets/projects/HealthBot/HealthBot.zip'}
-            ],
+            asset_src: [],
             developer: 'Nanda Kishore, Sainath, Ram Kumari, Janaki, Pavani'
         },{
             name: 'e-bills',
@@ -53,7 +48,7 @@ angular.module('starter.controllers', [])
             technology: 'Ionic',
             video_src: 'https://www.youtube.com/embed/NNDnCeATyDw',
             asset_src: [
-                {name: 'apk',src: 'assets/projects/Pradakshan/Pradakshan.apk'}
+                {name: 'apk',src: 'https://github.com/TechFreaky/Assets/releases/download/1.0/Pradakshan.apk'}
             ],
             developer: 'Nanda Kishore'
         },{
@@ -62,7 +57,7 @@ angular.module('starter.controllers', [])
             technology: 'Ionic',
             video_src: 'https://www.youtube.com/embed/bMR2PJ_np2M',
             asset_src: [
-                {name: 'apk',src: 'assets/projects/Notifier/Notifier.apk'}
+                {name: 'apk',src: 'https://github.com/TechFreaky/Assets/releases/download/1.0/Notifier.apk'}
             ],
             developer: 'Nanda Kishore'
         },{
@@ -71,8 +66,8 @@ angular.module('starter.controllers', [])
             technology: 'Ionic, Node.Js',
             video_src: 'https://www.youtube.com/embed/i0I6xIXuNNY',
             asset_src: [
-                {name: 'zip',src: 'assets/projects/BGM/BGM.zip'},
-                {name: 'apk',src: 'assets/projects/BGM/BGM.apk'}
+                {name: 'zip',src: 'https://github.com/TechFreaky/Assets/files/2019043/BGM.zip'},
+                {name: 'apk',src: 'https://github.com/TechFreaky/Assets/releases/download/1.0/BGM.apk'}
             ],
             developer: 'Nanda Kishore'
         },{
@@ -80,9 +75,7 @@ angular.module('starter.controllers', [])
             motto: 'My resume as a mobile application.',
             technology: 'Ionic',
             video_src: '',
-            asset_src: [
-                {name: 'apk',src: 'assets/projects/Resume/Resume.apk'}
-            ],
+            asset_src: [],
             developer: 'Nanda Kishore'
         },{
             name: 'Milinda',
@@ -97,7 +90,7 @@ angular.module('starter.controllers', [])
             technology: 'Ionic, PHP',
             video_src: 'https://www.youtube.com/embed/NJXrTntPRZc',
             asset_src: [
-                {name: 'apk',src: 'assets/projects/suNRIse/suNRIse.apk'}
+                {name: 'apk',src: 'https://github.com/TechFreaky/Assets/releases/download/1.0/suNRIse.apk'}
             ],
             developer: 'Nanda Kishore'
         },{
@@ -106,7 +99,7 @@ angular.module('starter.controllers', [])
             technology: 'Ionic',
             video_src: 'https://www.youtube.com/embed/YUkfWIz1n-U',
             asset_src: [
-                {name: 'apk',src: 'assets/projects/MyDairy/MyDairy.apk'}
+                {name: 'apk',src: 'https://github.com/TechFreaky/Assets/releases/download/1.0/MyDairy.apk'}
             ],
             developer: 'Nanda Kishore'
         },{
@@ -115,7 +108,7 @@ angular.module('starter.controllers', [])
             technology: 'Ionic, PHP, MySQL',
             video_src: 'https://www.youtube.com/embed/SC9EmMnzOJI',
             asset_src: [
-                {name: 'apk',src: 'assets/projects/CSE-B/CSE-B.apk'}
+                {name: 'apk',src: 'https://github.com/TechFreaky/Assets/releases/download/1.0/CSE-B.apk'}
             ],
             developer: 'Nanda Kishore'
         }]

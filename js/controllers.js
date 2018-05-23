@@ -75,16 +75,16 @@ angular.module('starter.controllers', [])
             motto: 'My resume as a mobile application.',
             technology: 'Ionic',
             video_src: 'https://www.youtube.com/embed/Nvm9fne3ZBA',
-            asset_src: [],
+            asset_src: [
+                {name: 'apk',src: 'https://github.com/TechFreaky/Assets/releases/download/1.0/Resume.apk'}
+            ],
             developer: 'Nanda Kishore'
         },{
             name: 'Milinda',
             motto: 'Managing payments, labour attendance, work progress happening at \'Milinda InfraCon Pvt Ltd\' construction sites.',
             technology: 'Ionic, PHP, MySQL',
             video_src: 'https://www.youtube.com/embed/3VyBaSrLFFA',
-            asset_src: [
-                {name: 'apk',src: 'https://github.com/TechFreaky/Assets/releases/download/1.0/Resume.apk'}
-            ],
+            asset_src: [],
             developer: 'Nanda Kishore'
         },{
             name: 'suNRIse 2k18',

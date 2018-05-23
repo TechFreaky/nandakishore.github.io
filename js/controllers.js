@@ -74,7 +74,7 @@ angular.module('starter.controllers', [])
             name: 'Resume',
             motto: 'My resume as a mobile application.',
             technology: 'Ionic',
-            video_src: 'https://www.youtube.com/watch?v=Nvm9fne3ZBA',
+            video_src: 'https://www.youtube.com/embed/Nvm9fne3ZBA',
             asset_src: [],
             developer: 'Nanda Kishore'
         },{

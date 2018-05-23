@@ -13,7 +13,7 @@ angular.module('starter.controllers', [])
             developer: 'Nanda Kishore'
         },{
             name: 'Before Leave',
-            motto: 'Minimizing the time to apply for leaves and adjusting worload efficiently (for the faculty of my college, NRI IT).',
+            motto: 'Minimizing the time to apply for leaves and adjusting workload efficiently (for the faculty of my college, NRI IT).',
             technology: 'Java Swings',
             video_src: 'https://www.youtube.com/embed/p5EBHFYwP9c',
             asset_src: [
@@ -74,7 +74,7 @@ angular.module('starter.controllers', [])
             name: 'Resume',
             motto: 'My resume as a mobile application.',
             technology: 'Ionic',
-            video_src: '',
+            video_src: 'https://www.youtube.com/watch?v=Nvm9fne3ZBA',
             asset_src: [],
             developer: 'Nanda Kishore'
         },{
@@ -82,7 +82,9 @@ angular.module('starter.controllers', [])
             motto: 'Managing payments, labour attendance, work progress happening at \'Milinda InfraCon Pvt Ltd\' construction sites.',
             technology: 'Ionic, PHP, MySQL',
             video_src: 'https://www.youtube.com/embed/3VyBaSrLFFA',
-            asset_src: [],
+            asset_src: [
+                {name: 'apk',src: 'https://github.com/TechFreaky/Assets/releases/download/1.0/Resume.apk'}
+            ],
             developer: 'Nanda Kishore'
         },{
             name: 'suNRIse 2k18',

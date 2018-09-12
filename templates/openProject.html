@@ -1,0 +1,77 @@
+<ion-modal-view>
+
+    <ion-header-bar class="bar-light" align-title="center">
+        <img ng-src="img/projects/{{ProjectDetails.name}}.png" height="100%" width="auto"/><h1 class="title">{{ProjectDetails.name}}</h1>
+        <div class="buttons">
+            <button style="color: #387ef5;" class="button button-clear button-icon ion-close-circled" ng-click="cancelModal()"></button>
+        </div>
+    </ion-header-bar>
+
+    <ion-content class="padding" align="center"> 
+
+        <div class="card rounded card-shadow">
+
+            <div class="item item-divider custom-header" align="center">
+                <b>Motto</b>
+            </div>
+
+            <div class="item item-body">
+                <b>{{ProjectDetails.motto}}</b>
+            </div>
+
+        </div>
+        
+        <div class="card rounded card-shadow">
+
+            <div class="item item-divider custom-header" align="center">
+                <b>Working Video</b>
+            </div>
+
+            <a class="item item-image" href="{{ProjectDetails.video_src}}" target="_blank">
+                <br>
+                <img ng-src="img/projects/{{ProjectDetails.name}}.png" height="auto" width="25%"/>
+                <br><br>
+            </a>
+
+        </div>
+
+
+        <div class="card rounded card-shadow">
+
+            <div class="item item-divider custom-header" align="center">
+                <b>Technologies Used</b>
+            </div>
+
+            <div class="item item-body">
+                <b>{{ProjectDetails.technology}}</b>
+            </div>
+
+        </div>
+
+
+        <div class="card rounded card-shadow">
+
+            <div class="item item-divider custom-header" align="center">
+                <b>Develper(s)</b>
+            </div>
+
+            <div class="item item-body">
+                <b>{{ProjectDetails.developer}}</b>
+            </div>
+
+        </div>
+
+
+        <div ng-if="ProjectDetails.asset_src.length != 0">
+
+            <hr>
+            <span ng-repeat="sources in ProjectDetails.asset_src">
+                <a style="text-decoration: none;border-radius : 5px" href="{{sources.src}}" target="_blank" class="button button-positive"><b>Download {{sources.name}}</b></a>&nbsp;
+            </span>
+
+        </div>
+
+
+    </ion-content>
+    
+</ion-modal-view>

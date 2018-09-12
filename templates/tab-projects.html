@@ -1,0 +1,15 @@
+<ion-view hide-nav-bar="true">
+  <ion-content class="padding">
+
+    <ion-list class="card">
+      
+        <div class="item item-avatar" ng-repeat="project in ProjectsList" ng-click="openProject(project)">
+          <img ng-src="img/projects/{{project.name}}.png">
+          <h2><b>{{project.name}}</b></h2>
+          <p>Dev: {{project.developer}}</p>
+        </div>
+
+    </ion-list>
+
+  </ion-content>
+</ion-view>

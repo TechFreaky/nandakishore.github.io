@@ -1,0 +1,58 @@
+<div class="w3-main" style="margin-left:200px">
+            
+    <div class="w3-container w3-blue">
+        <h2>
+        <i ng-click="openSideNav()" class="fa fa-bars w3-xlarge w3-hide-large"></i>
+            {{RouteName}}
+        </h2>
+    </div>
+
+    <div class="container" ng-click="closeSideNav()">
+        <div class="row">
+            <div class="col-xs-12">
+                
+                <br>
+                <div class="w3-card-4" style="border-radius : 5px;">
+
+                    <header class="w3-container w3-blue" style="border-radius : 5px;">
+                        <h3><b>Soft Skills</b></h3>
+                    </header>
+
+                </div>
+                <br>
+                <div class="w3-row" align="center"> 
+                    <div class="w3-col m4">
+                        <img src="img/skills/leadership.png" width="200px">
+                        <p><b style="font-size: 20px;">Leadership</b></p>
+                    </div>
+                    <div class="w3-col m4">
+                        <img src="img/skills/team.png" width="200px">
+                        <p><b style="font-size: 20px;">Team Player</b></p>
+                    </div>
+                    <div class="w3-col m4">
+                        <img src="img/skills/communication.png" width="200px">
+                        <p><b style="font-size: 20px;">Communication</b></p>
+                    </div>
+                </div>
+
+                <br>
+                <div class="w3-card-4" style="border-radius : 5px;">
+
+                    <header class="w3-container w3-blue" style="border-radius : 5px;">
+                        <h3><b>Technical Skills</b></h3>
+                    </header>
+
+                </div>
+                <br>
+                <div class="w3-row" align="center"> 
+                    <div class="w3-col m3" ng-repeat="skill in TechnicalSkills">
+                        <img src="img/skills/{{skill.src_url}}.png" width="200px">
+                        <p><b style="font-size: 20px;">{{skill.name}}</b></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

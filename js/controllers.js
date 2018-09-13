@@ -113,6 +113,13 @@ angular.module('starter.controllers', [])
                 {name: 'apk',src: 'https://github.com/TechFreaky/Assets/releases/download/1.0/CSE-B.apk'}
             ],
             developer: 'Nanda Kishore'
+        },{
+            name: 'OffersNearBy',
+            motto: 'Two custom made mobile applications for OffersNearBy Pvt. Ltd.',
+            technology: 'Ionic, Android, Xcode, PHP',
+            video_src: '',
+            asset_src: [],
+            developer: 'Nanda Kishore'
         }]
 
         $rootScope.openSideNav = function(){

@@ -5,13 +5,6 @@ angular.module('starter.controllers', [])
         $rootScope.SideMenuToggle = 'none'
 
         $rootScope.ProjectsList = [{
-            name: 'Versus',
-            motto: 'Enthusiasm for programming of a young and novice programmer lead to the development of Versus.',
-            technology: 'Batch Script',
-            video_src: 'https://www.youtube.com/embed/wsFHoL0DKcI',
-            asset_src: [],
-            developer: 'Nanda Kishore'
-        },{
             name: 'Before Leave',
             motto: 'Minimizing the time to apply for leaves and adjusting workload efficiently (for the faculty of my college, NRI IT).',
             technology: 'Java Swings',
@@ -28,6 +21,29 @@ angular.module('starter.controllers', [])
             video_src: 'https://www.youtube.com/embed/oa49JSRHc6Y',
             asset_src: [],
             developer: 'Nanda Kishore, Sainath, Ram Kumari, Janaki, Pavani'
+        },{
+            name: 'Milinda',
+            motto: 'Managing payments, labour attendance, work progress happening at \'Milinda InfraCon Pvt Ltd\' construction sites.',
+            technology: 'Ionic, PHP, MySQL',
+            video_src: 'https://www.youtube.com/embed/3VyBaSrLFFA',
+            asset_src: [],
+            developer: 'Nanda Kishore'
+        },{
+            name: 'OffersNearBy',
+            motto: 'Two custom made mobile applications for OffersNearBy Pvt. Ltd.',
+            technology: 'Ionic, Android, Xcode, PHP',
+            video_src: '',
+            asset_src: [],
+            developer: 'Nanda Kishore'
+        }]
+
+        $rootScope.MiniProjectsList = [{
+            name: 'Versus',
+            motto: 'Enthusiasm for programming of a young and novice programmer lead to the development of Versus.',
+            technology: 'Batch Script',
+            video_src: 'https://www.youtube.com/embed/wsFHoL0DKcI',
+            asset_src: [],
+            developer: 'Nanda Kishore'
         },{
             name: 'e-bills',
             motto: 'Easy billing system compatible with present GST Tax System for Hindustan Candle Industries.',
@@ -80,13 +96,6 @@ angular.module('starter.controllers', [])
             ],
             developer: 'Nanda Kishore'
         },{
-            name: 'Milinda',
-            motto: 'Managing payments, labour attendance, work progress happening at \'Milinda InfraCon Pvt Ltd\' construction sites.',
-            technology: 'Ionic, PHP, MySQL',
-            video_src: 'https://www.youtube.com/embed/3VyBaSrLFFA',
-            asset_src: [],
-            developer: 'Nanda Kishore'
-        },{
             name: 'suNRIse 2k18',
             motto: 'Registering participants for \'suNRIse 2k18\' using QR code.',
             technology: 'Ionic, PHP',
@@ -114,9 +123,9 @@ angular.module('starter.controllers', [])
             ],
             developer: 'Nanda Kishore'
         },{
-            name: 'OffersNearBy',
-            motto: 'Two custom made mobile applications for OffersNearBy Pvt. Ltd.',
-            technology: 'Ionic, Android, Xcode, PHP',
+            name: 'Confidential',
+            motto: 'Android application for document vault with multi-level security.',
+            technology: 'Ionic',
             video_src: '',
             asset_src: [],
             developer: 'Nanda Kishore'
@@ -149,6 +158,30 @@ angular.module('starter.controllers', [])
         $scope.RouteName = "Project-"+$scope.ProjectId+": "+$rootScope.ProjectsList[$scope.ProjectId].name
 
         $scope.Project = $rootScope.ProjectsList[$scope.ProjectId]
+
+        $scope.trustSrc = function(src) {
+            return $sce.trustAsResourceUrl(src);
+        }
+
+        $scope.hideForaSec = function(){
+
+            $timeout(function() {
+                $scope.hiding = true
+            },500)
+
+        }
+
+    })
+
+    .controller("MiniProjectsCtrl", function($scope, $rootScope, $stateParams, $sce, $timeout){
+
+        $rootScope.closeSideNav()
+
+        $scope.ProjectId = $stateParams.ProjectId
+
+        $scope.RouteName = "Project-"+$scope.ProjectId+": "+$rootScope.MiniProjectsList[$scope.ProjectId].name
+
+        $scope.Project = $rootScope.MiniProjectsList[$scope.ProjectId]
 
         $scope.trustSrc = function(src) {
             return $sce.trustAsResourceUrl(src);

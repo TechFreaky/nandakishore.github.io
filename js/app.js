@@ -22,6 +22,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
         controller : "ProjectsCtrl"
     })
 
+    .state('miniprojects', {
+        url: '/miniprojects/:ProjectId',
+        templateUrl: 'templates/projects.html',
+        controller : "MiniProjectsCtrl"
+    })
+
     .state('experience', {
         url: '/experience',
         templateUrl: 'templates/experience.html',

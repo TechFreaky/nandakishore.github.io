@@ -30,12 +30,22 @@
                 <i style="font-size: 150%;" class="fa fa-info-circle"></i> <b>About</b>
             </a>
   
-            <button style="border-bottom: 1px dashed grey;" class="w3-button w3-block w3-left-align" onclick="myAccFunc()" ng-dblclick="closeSideNav()">
+            <button style="border-bottom: 1px dashed grey;" class="w3-button w3-block w3-left-align" onclick="myAccFunc(0)" ng-dblclick="closeSideNav()">
                 <i style="font-size: 150%;" class="fa fa-list-alt"></i> <b>Projects</b> <i class="fa fa-caret-down"></i>
             </button>
 
-            <div id="demoAcc" class="w3-hide w3-black w3-card">
+            <div id="projects" class="w3-hide w3-black w3-card">
                 <a href="#/projects/{{$index}}" style="text-decoration: none;" ng-click="closeSideNav()" class="w3-bar-item w3-button" ng-repeat="project in ProjectsList">
+                    <img src="img/projects/{{project.name}}.png" height="auto" width="25%" /> {{project.name}}
+                </a>
+            </div>
+
+            <button style="border-bottom: 1px dashed grey;" class="w3-button w3-block w3-left-align" onclick="myAccFunc(1)" ng-dblclick="closeSideNav()">
+                <i style="font-size: 150%;" class="fa fa-list-alt"></i> <b>Mini Projects</b> <i class="fa fa-caret-down"></i>
+            </button>
+
+            <div id="miniprojects" class="w3-hide w3-black w3-card">
+                <a href="#/miniprojects/{{$index}}" style="text-decoration: none;" ng-click="closeSideNav()" class="w3-bar-item w3-button" ng-repeat="project in MiniProjectsList">
                     <img src="img/projects/{{project.name}}.png" height="auto" width="25%" /> {{project.name}}
                 </a>
             </div>
@@ -67,8 +77,14 @@
 
         <script>
 
-            function myAccFunc() {
-                var x = document.getElementById("demoAcc");
+            function myAccFunc(decider) {
+                var x;
+                if(decider === 0){
+                    x = document.getElementById("projects");   
+                } else{
+                    x = document.getElementById("miniprojects");  
+                }
+                
                 if (x.className.indexOf("w3-show") == -1) {
                     x.className += " w3-show";
                 } else { 
